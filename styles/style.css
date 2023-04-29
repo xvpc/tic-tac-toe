@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Dancing+Script:wght@400;700&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar&display=swap');
+
+:root{
+    --main-color: rgba(226, 83, 255, 0.87);
+}
+*{
+    font-family: Dancing Script, 'Courier New', Courier, monospace;
+    color: white;
+}
+ul{
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style-type: none !important;
+}
+a,
+a:hover{
+    text-decoration: none !important;
+    color: white !important;
+}
+.navbar-container,
+.footer-container{
+    transition: var(--main-transition);
+}
+/* Start Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar-track {
+    border: 10px solid rgba(222, 222, 223, 0.678);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.911);
+}
+::-webkit-scrollbar-thumb:hover {
+    opacity: 0.7;
+}
+/* for Firefox */
+html {
+    scrollbar-color: rgba(0, 0, 0, 0.911) rgba(222, 222, 223, 0.678);
+}
+/* End Scrollbar */
+/* Start Custom classes */
+.remove-selecting{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.opacity-hover:hover{
+    transition: 0.3s;
+    opacity: .6;
+}
+.shadow-plugin{
+    box-shadow: 0 12px 20px 0 rgba(255, 251, 251, 12%);
+}
+.bg-lightblack{
+    background-color: rgba(15, 15, 15, 0.863);
+}
+/* End Custom classes */
+
+/* Start Background */
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+.background {
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    /* background: #0c456ba6; */
+    background: #0e8ef0c4;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 37s linear infinite;
+}
+
+.background li:nth-child(0) {
+    left: 26%;
+    width: 156px;
+    height: 156px;
+    bottom: -156px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 80%;
+    width: 113px;
+    height: 113px;
+    bottom: -113px;
+    animation-delay: 1s;
+}
+.background li:nth-child(2) {
+    left: 77%;
+    width: 148px;
+    height: 148px;
+    bottom: -148px;
+    animation-delay: 9s;
+}
+.background li:nth-child(3) {
+    left: 89%;
+    width: 75px;
+    height: 75px;
+    bottom: -75px;
+    animation-delay: 4s;
+}
+.background li:nth-child(4) {
+    left: 33%;
+    width: 126px;
+    height: 126px;
+    bottom: -126px;
+    animation-delay: 11s;
+}
+/* End Background */
+
+/* Start Main */
+.game-turn{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.game-container{
+    width: 220px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+    transition: .5s;
+}
+.game-container li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    transition: .5s;
+}
+.game-items:not(.active){
+    cursor: pointer;
+}
+/* End Main */
+
+/* Start Footer */
+.footer-credit p,
+.footer-credit p span{
+    font-family: Dancing Script, 'Courier New', Courier, monospace;
+}
+/* End Footer */
