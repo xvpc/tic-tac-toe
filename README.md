@@ -1,4 +1,4 @@
-# Memory Game
+# Tic-Tac-Toe
 
 Demo [tic-tac-toe](https://xvpc.github.io/tic-tac-toe)
 
